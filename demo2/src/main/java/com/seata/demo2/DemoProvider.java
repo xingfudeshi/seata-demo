@@ -3,6 +3,7 @@ package com.seata.demo2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * @author ctl
@@ -10,8 +11,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableFeignClients
+@EnableJpaRepositories
 public class DemoProvider {
     public static void main(String[] args) {
         SpringApplication.run(DemoProvider.class, args);
     }
+
 }
